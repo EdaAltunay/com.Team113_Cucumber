@@ -31,9 +31,12 @@ public class HerokuappStepDefinitions {
 
         try {
             Assert.assertTrue(herokuPage.deleteButonu.isDisplayed());
+            // delete butonunu bulamayinca nosuchExpection firlatir ve bu expection bizim istedigimiz sonucu verir.
+            // Yani delete butonunun gorunmedigini test etmis oluruz.
         } catch (NoSuchElementException e) {
 
             Assert.assertTrue(true);
+            // bu satira geldiyse eger delete butonunu goremedi yani testimiz passed oldu.bunuda boyle gosterebiliriz.
         }
     }
 }

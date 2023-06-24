@@ -35,7 +35,6 @@ public class AmazonStepDefinitions {
 
     @When("Java icin arama yapar")
     public void java_icin_arama_yapar() {
-
         amazonPage.aramaKutusu.sendKeys("Java" + Keys.ENTER);
     }
     @Then("Arama sonuclarinin Java icerdigini test eder")
@@ -96,28 +95,14 @@ public class AmazonStepDefinitions {
         }
     }
 
-
-
-
-
-
     @Then("ilk urune click yapar")
     public void ilk_urune_click_yapar() {
-
-        throw new io.cucumber.java.PendingException();
+        amazonPage.ilkUrunElementi.click();
     }
     @Then("acilan urun isminin {string} icerdigini test eder")
-    public void acilan_urun_isminin_icerdigini_test_eder(String string) {
+    public void acilan_urun_isminin_icerdigini_test_eder(String arananKelime) {
+        String actualUrunIsmi= amazonPage.ilkUrunIsimElementi.getText();
 
-        throw new io.cucumber.java.PendingException();
+        Assert.assertTrue(actualUrunIsmi.contains(arananKelime));
     }
-
-
-
-
-
-
-
-
-
 }

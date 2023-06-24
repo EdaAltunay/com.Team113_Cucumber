@@ -6,15 +6,23 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features",
-        glue = "stepdefinitions",
-        tags = "@wip",
+                plugin = {"html:target/cucumber-reports.html",
+                         //cucumber-reports: ne yazarsak rapor ismi o cikar. Orn: smoke27mayis
+                          "json:target/json-reports/cucumber.json",
+                          "junit:target/xml-report/cucumber.xml" },
 
-        dryRun = false
+                features = "src/test/resources/resources/features",
+
+                glue = "stepdefinitions",
+
+                tags = "@ae",
+
+                dryRun = false
 )
 
 public class Runner {
-    /*
+
+
         Cucumber'da Runner Class'i istedigimiz testleri calistirmak
         ve her calistirilan test icin rapor hazirlamak amaciyla kullanilir
 
@@ -44,7 +52,7 @@ public class Runner {
                Runner class'inda belirtilen tag'a sahip
                TUM Fature ve Scenario(lari) calistirir
 
-               Eger birden fazla tag'i kontrol ederek calistirmasini istersek
+      ****     Eger birden fazla tag'i kontrol ederek calistirmasini istersek
                "@regression or @smoke" veya "@regression and @smoke" gibi yazabiliriz
 
        dryRun : Bir feature dosyasini ilk defa yazdigimizda
@@ -66,6 +74,7 @@ public class Runner {
                 dryRun= true dedigimizde
                 Cucumber testleri calistirmaz, sadece eksik adim var mi diye kontrol eder
                 eksik adim yoksa Test PASSED yazar
+
                 dryRun = false default degerdir
                 ve Testleri normal olarak calistirmamizi saglar
 
