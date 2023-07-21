@@ -20,6 +20,7 @@ public class AmazonStepDefinitions {
 
     @When("Nutella icin arama yapar")
     public void nutella_icin_arama_yapar() {
+
         amazonPage.aramaKutusu.sendKeys("Nutella" + Keys.ENTER);
     }
     @Then("Arama sonuclarinin Nutella icerdigini test eder")

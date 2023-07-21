@@ -5,7 +5,7 @@ Feature: US1012 Kullanici istedigi firmanin onceki gunki kapanis degerini okur
 
 
     Given Kullanici "guruUrl" anasayfaya gider
-    Then guru99 sayfasinda Cookies kabul eder
+
     And "DCB Bank" Prev.Close degerini yazdirir
     Then tum sayfa Screenshot alir
     And Sayfayi kapatir

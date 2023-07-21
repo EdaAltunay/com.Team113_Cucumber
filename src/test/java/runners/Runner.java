@@ -21,7 +21,7 @@ import org.junit.runner.RunWith;
 )
 
 public class Runner {
-
+    /*
 
         Cucumber'da Runner Class'i istedigimiz testleri calistirmak
         ve her calistirilan test icin rapor hazirlamak amaciyla kullanilir
