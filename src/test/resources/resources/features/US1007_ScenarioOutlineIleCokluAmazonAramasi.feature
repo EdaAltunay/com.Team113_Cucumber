@@ -1,5 +1,5 @@
 Feature: US1007 Amazonda coklu arama
-
+@m
   Scenario Outline: TC13 Kullanici Amazon'da coklu arama yapabilmeli
 
     Given Kullanici "amazonUrl" anasayfaya gider

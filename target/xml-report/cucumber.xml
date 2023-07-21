@@ -1,50 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="2.626" tests="2" skipped="0" failures="2" errors="0">
-<testcase classname="US1009 Kullanici Automation Exercise sayfasinda yeni kullanici olusturur" name="TC15 Kullanici kendi bilgileriyle yeni kullanici olusturabilmeli" time="1.61">
-<failure type="java.lang.NullPointerException" message="null value in entry: url=null">
-<![CDATA[java.lang.NullPointerException: null value in entry: url=null
-	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:33)
-	at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:43)
-	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:81)
-	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:128)
-	at org.openqa.selenium.remote.DriverCommand.GET(DriverCommand.java:187)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:297)
-	at stepdefinitions.AmazonStepDefinitions.kullaniciAnasayfayaGider(AmazonStepDefinitions.java:70)
-	at ✽.Kullanici "aeUrl" anasayfaya gider(file:///C:/Users/MONSTER/IdeaProjects/com.Team113_Cucumber/src/test/resources/resources/features/US1009_AutomationExercise1.feature:6)
-]]>
-</failure>
+<testsuite name="Cucumber" time="42.899" tests="4" skipped="0" failures="0" errors="0">
+<testcase classname="US1008 Toplu kullanici listesi ile negatif login testi" name="TC14 Kullanici listedeki kullanici bilgileri ile giris yapilamadigini test eder - Example #1.1" time="14.188">
 <system-out><![CDATA[
-Given Kullanici "aeUrl" anasayfaya gider....................................failed
-And user sign up linkine tiklar.............................................skipped
-And 2 saniye bekler.........................................................skipped
-And user Create an account bolumune name ve email adresi girer..............skipped
-And signUp butonuna basar...................................................skipped
-And user kisisel bilgilerini ve iletisim bilgilerini girer..................skipped
-And user Create Account butonuna basar......................................skipped
-Then hesap olustugunu test edin.............................................skipped
-And Sayfayi kapatir.........................................................skipped
+Given Kullanici "qdUrl" anasayfaya gider....................................passed
+Then ilk login linkine click yapar..........................................passed
+And user email olarak "abc@gmail.com" girer.................................passed
+And password olarak "12345" girer...........................................passed
+When login butonuna basar...................................................passed
+Then giris yapilamadigini test eder.........................................passed
+And Sayfayi kapatir.........................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="US1010 Kullanici yanlis email ile sisteme giris yapamaz" name="TC16 eksik email ile sisteme giris yapilamaz" time="0.892">
-<failure type="java.lang.NullPointerException" message="null value in entry: url=null">
-<![CDATA[java.lang.NullPointerException: null value in entry: url=null
-	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:33)
-	at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:43)
-	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:81)
-	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:128)
-	at org.openqa.selenium.remote.DriverCommand.GET(DriverCommand.java:187)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:297)
-	at stepdefinitions.AmazonStepDefinitions.kullaniciAnasayfayaGider(AmazonStepDefinitions.java:70)
-	at ✽.Kullanici "aeUrl" anasayfaya gider(file:///C:/Users/MONSTER/IdeaProjects/com.Team113_Cucumber/src/test/resources/resources/features/US1010_AutomationExercise2.feature:6)
-]]>
-</failure>
+<testcase classname="US1008 Toplu kullanici listesi ile negatif login testi" name="TC14 Kullanici listedeki kullanici bilgileri ile giris yapilamadigini test eder - Example #1.2" time="9.043">
 <system-out><![CDATA[
-Given Kullanici "aeUrl" anasayfaya gider....................................failed
-Then user sign up linkine tiklar............................................skipped
-And Login to your account bolumunde email kutusuna @isareti olmayan email adresi yazar.skipped
-And password kutusuna sifre yazar ve enter'a tiklar.........................skipped
-Then sisteme giris yapilamadigini test eder.................................skipped
-And Sayfayi kapatir.........................................................skipped
+Given Kullanici "qdUrl" anasayfaya gider....................................passed
+Then ilk login linkine click yapar..........................................passed
+And user email olarak "asd@gmail.com" girer.................................passed
+And password olarak "65743" girer...........................................passed
+When login butonuna basar...................................................passed
+Then giris yapilamadigini test eder.........................................passed
+And Sayfayi kapatir.........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1008 Toplu kullanici listesi ile negatif login testi" name="TC14 Kullanici listedeki kullanici bilgileri ile giris yapilamadigini test eder - Example #1.3" time="9.679">
+<system-out><![CDATA[
+Given Kullanici "qdUrl" anasayfaya gider....................................passed
+Then ilk login linkine click yapar..........................................passed
+And user email olarak "klm@gmail.com" girer.................................passed
+And password olarak "3214567" girer.........................................passed
+When login butonuna basar...................................................passed
+Then giris yapilamadigini test eder.........................................passed
+And Sayfayi kapatir.........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="US1008 Toplu kullanici listesi ile negatif login testi" name="TC14 Kullanici listedeki kullanici bilgileri ile giris yapilamadigini test eder - Example #1.4" time="9.649">
+<system-out><![CDATA[
+Given Kullanici "qdUrl" anasayfaya gider....................................passed
+Then ilk login linkine click yapar..........................................passed
+And user email olarak "zzz@gmail.com" girer.................................passed
+And password olarak "java12" girer..........................................passed
+When login butonuna basar...................................................passed
+Then giris yapilamadigini test eder.........................................passed
+And Sayfayi kapatir.........................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
